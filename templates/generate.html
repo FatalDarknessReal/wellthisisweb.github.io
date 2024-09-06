@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Генерация пароля</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <ul class="mainmenu">
+        <li><a href="/">Главная</a></li>
+        <li><a href="/logout">Выйти</a></li>
+        <li class="last"><a href="/main_menu">Главное меню</a></li>
+    </ul>
+    <div class="container">
+        <h1>Генерация пароля</h1>
+        <form action="" method="POST" class="form-contact">
+            {{ form.hidden_tag() }}  <!-- Добавление токена CSRF -->
+            <p>
+                {{ form.name.label }}
+            </p>
+            <p>
+                {{ form.name }}
+            </p>
+            <p>
+                {{ form.length.label }}
+            </p>
+            <p>
+                {{ form.length }}
+            </p>
+            <p>
+                {{ form.special_chars.label }}
+                {{ form.special_chars }}
+            </p>
+            <p>
+                {{ form.submit }}
+            </p>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Менеджер паролей</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <ul class="mainmenu">
+        <li><a href="/">Главная</a></li>
+        <li><a href="/logout">Выйти</a></li>
+        <li class="last"><a href="/generate">Сгенерировать пароль</a></li>
+    </ul>
+    <div class="container">
+        <div class="content">
+            <h1>Менеджер паролей</h1>
+            {% with messages = get_flashed_messages(with_categories=true) %}
+              {% if messages %}
+                {% for category, message in messages %}
+                  <div class="flash {{ category }}">{{ message }}</div>
+                {% endfor %}
+              {% endif %}
+            {% endwith %}
+            <h2>Сохраненные пароли</h2>
+            <ul>
+                {% for password in passwords %}
+                <li>
+                    {{ password.name }}: {{ password.password }}
+                    <a href="{{ url_for('manage', password_id=password.id) }}">Управлять</a>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+    <a href="/users">Посмотреть всех пользователей</a>
+</body>
+</html>

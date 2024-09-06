@@ -1,0 +1,121 @@
+html, body {
+    font-family: 'Arial';
+    margin: 0;
+    padding: 0;
+    color: #222; /* Цвет Вход, Имя пользователя, Пароль*/
+    height: 100%;
+    width: 100%;
+
+}
+
+.container {
+    display: flex;
+    flex-direction: column; /* Вертикальное расположение */
+    justify-content: center; /* Центрирование по вертикали */
+    align-items: center; /* Центрирование по горизонтали */
+    height: 93vh; /* Высота контейнера равна высоте окна */
+    background-color: #9e9e9e;
+}
+
+form {
+    border: 4px solid #bcc; /* Добавление рамки для формы */
+    padding: 20px; /* Отступы внутри формы */
+    border-radius: 10px; /* Закругление углов */
+    background-color: #f9f9f9; /* Цвет фона формы */
+    display: flex; /* Используем flexbox для формы */
+    flex-direction: column; /* Вертикальное расположение элементов формы */
+    align-items: center; /* Центрирование элементов формы */
+}
+
+.form-group {
+    display: flex; /* Используем flexbox для группы формы */
+    flex-direction: column; /* Вертикальное расположение элементов группы */
+    margin-bottom: 10px; /* Отступ снизу для группы */
+}
+
+.form-group label {
+    margin-bottom: 5px; /* Отступ снизу для лейбла */
+}
+
+h1 {
+    text-align: center; /* Центрирование заголовка */
+}
+
+a {
+    color: #0059b2;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #CC0000;
+    text-decoration: underline;
+}
+
+.clear {
+    clear: both;
+}
+
+ul.mainmenu {
+    list-style: none;
+    background: #3F4137;
+    height: 60px;
+    margin: 0;
+    padding: 0;
+    color: #fdc073;
+    font-size: 20px;
+    overflow: hidden;
+}
+
+ul.mainmenu li {
+    float: left;
+    margin: 18px 40px 0 50px;
+}
+
+ul.mainmenu li.last {
+    float: right;
+}
+
+ul.mainmenu li a {
+    color: #fdc073;
+    text-decoration: none;
+}
+
+ul.mainmenu li a:hover {
+    color: #FDA83D;
+}
+
+div.content {
+    margin: 10px;
+}
+
+.form-contact label {
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 10px; /* Отступ сверху для кнопки */
+}
+
+.form-contact p {
+    font-size: 16px;
+    margin-top: 10px; /* Отступ сверху для кнопки */
+}
+
+.form-contact input[type=submit], .form-contact textarea {
+    font-size: 16px;
+    margin-top: 10px; /* Отступ сверху для кнопки */
+}
+
+.flash {
+    padding: 8px;
+    border: 1px solid #FF4343;
+    background: #FF9C9C;
+}
+
+.flash.success {
+    border: 1px solid #21DB56;
+    background: #bcdfbe;
+}
+
+.flash.error {
+    border: 1px solid #FF4343;
+    background: #FF9C9C;
+}
